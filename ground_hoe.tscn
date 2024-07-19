@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckohkgw1l2u20"]
+
+[ext_resource type="PackedScene" uid="uid://70l2dixmkln5" path="res://snaggable_item.tscn" id="1_6tlea"]
+[ext_resource type="Texture2D" uid="uid://dn8ayvfadj74w" path="res://Assets/HotbarAssets/hoe.png" id="2_rjcuo"]
+
+[node name="GroundHoe" instance=ExtResource("1_6tlea")]
+position = Vector2(5, -4)
+scale = Vector2(0.209677, 0.167742)
+texture = ExtResource("2_rjcuo")
+type = "Hoe"
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(26.2308, -14.9038)

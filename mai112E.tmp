@@ -1,0 +1,96 @@
+[gd_scene load_steps=14 format=3 uid="uid://kn6sc3i51v68"]
+
+[ext_resource type="Texture2D" uid="uid://1fby7roakekt" path="res://Assets/ForthrightGround.png" id="1_67dsq"]
+[ext_resource type="Texture2D" uid="uid://b7ndch47g7nbq" path="res://Assets/PlayerWalk/walk1.png" id="2_d61ku"]
+[ext_resource type="Script" path="res://TileMap.gd" id="2_wpiv6"]
+[ext_resource type="Script" path="res://Player.gd" id="2_xn2c1"]
+[ext_resource type="Texture2D" uid="uid://dml845qhixq2v" path="res://Assets/PlayerWalk/walk2.png" id="3_c7qa2"]
+[ext_resource type="PackedScene" uid="uid://ckohkgw1l2u20" path="res://ground_hoe.tscn" id="7_l33ux"]
+[ext_resource type="PackedScene" uid="uid://x2ctrtgecdn5" path="res://ground_barrel.tscn" id="8_g10y8"]
+[ext_resource type="Script" path="res://ItemList.gd" id="8_xgop5"]
+[ext_resource type="PackedScene" uid="uid://170kgmlguyb5" path="res://ground_candle.tscn" id="9_1xrnt"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_go167"]
+texture = ExtResource("1_67dsq")
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7wpdh"]
+sources/0 = SubResource("TileSetAtlasSource_go167")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k78tv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d61ku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_c7qa2")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myyvs"]
+size = Vector2(23, 50)
+
+[node name="Main" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 3
+scale = Vector2(4, 4)
+tile_set = SubResource("TileSet_7wpdh")
+format = 2
+layer_0/tile_data = PackedInt32Array(1, 0, 0, 2, 65536, 0, 3, 65536, 0, 4, 65536, 0, 5, 65536, 0, 6, 65536, 0, 7, 65536, 0, 8, 65536, 0, 65544, 65536, 0, 131080, 65536, 0, 196616, 65536, 0, 262152, 65536, 0, 262151, 65536, 0, 262150, 65536, 0, 262149, 65536, 0, 262148, 65536, 0, 262147, 65536, 0, 262146, 65536, 0, 327680, 65536, 0, 327681, 65536, 0, 327682, 65536, 0, 327683, 65536, 0, 327684, 65536, 0, 327685, 65536, 0, 327686, 65536, 0, 327687, 65536, 0, 327688, 65536, 0, 9, 65536, 0, 10, 65536, 0, 11, 65536, 0, 12, 65536, 0, 13, 65536, 0, 14, 65536, 0, 15, 65536, 0, 16, 65536, 0, 17, 65536, 0, 65553, 65536, 0, 131089, 65536, 0, 196625, 65536, 0, 262161, 65536, 0, 327697, 65536, 0, 393233, 65536, 0, 393234, 65536, 0, 458770, 65536, 0, 524306, 65536, 0, 589842, 65536, 0, 0, 65536, 0, 65536, 65536, 0, 131072, 65536, 0, 196608, 65536, 0, 262144, 65536, 0, 393216, 65536, 0, 458752, 65536, 0, 524288, 65536, 0, 589824, 65536, 0, 589825, 65536, 0, 589826, 65536, 0, 589827, 65536, 0, 524292, 65536, 0, 589828, 65536, 0, 589829, 65536, 0, 524294, 65536, 0, 589831, 65536, 0, 589832, 65536, 0, 589833, 65536, 0, 589834, 65536, 0, 589835, 65536, 0, 589836, 65536, 0, 589837, 65536, 0, 589838, 65536, 0, 589839, 65536, 0, 589840, 65536, 0, 589841, 65536, 0, 589830, 65536, 0, 524289, 65536, 0, 524290, 65536, 0, 524291, 65536, 0, 524293, 65536, 0, 524295, 65536, 0, 524296, 65536, 0, 524297, 65536, 0, 524298, 65536, 0, 524299, 65536, 0, 524300, 65536, 0, 524301, 65536, 0, 524302, 65536, 0, 524303, 65536, 0, 524304, 65536, 0, 524305, 65536, 0, 458769, 65536, 0, 458768, 65536, 0, 458767, 65536, 0, 458766, 65536, 0, 458765, 65536, 0, 458764, 65536, 0, 458763, 65536, 0, 458762, 65536, 0, 458761, 65536, 0, 458760, 65536, 0, 393224, 65536, 0, 393223, 65536, 0, 393222, 65536, 0, 393221, 65536, 0, 393220, 65536, 0, 393219, 65536, 0, 458755, 65536, 0, 458754, 65536, 0, 458753, 65536, 0, 393217, 65536, 0, 393218, 65536, 0, 458758, 65536, 0, 458759, 65536, 0, 458757, 65536, 0, 458756, 65536, 0, 393226, 65536, 0, 327689, 65536, 0, 262153, 65536, 0, 196617, 65536, 0, 131081, 65536, 0, 65545, 65536, 0, 65547, 65536, 0, 65548, 65536, 0, 131085, 65536, 0, 131086, 65536, 0, 196622, 65536, 0, 262157, 65536, 0, 327692, 65536, 0, 393228, 65536, 0, 393227, 65536, 0, 327691, 65536, 0, 262155, 65536, 0, 262154, 65536, 0, 262156, 65536, 0, 393225, 65536, 0, 327690, 65536, 0, 196620, 65536, 0, 131083, 65536, 0, 131082, 65536, 0, 65546, 65536, 0, 65549, 65536, 0, 65550, 65536, 0, 65551, 65536, 0, 65552, 65536, 0, 131088, 65536, 0, 196624, 65536, 0, 262160, 65536, 0, 327696, 65536, 0, 393232, 65536, 0, 393231, 65536, 0, 393230, 65536, 0, 393229, 65536, 0, 327693, 65536, 0, 262158, 65536, 0, 262159, 65536, 0, 196623, 65536, 0, 131087, 65536, 0, 327695, 65536, 0, 327694, 65536, 0, 196621, 65536, 0, 131084, 65536, 0, 196619, 65536, 0, 196618, 65536, 0, 196615, 65536, 0, 196614, 65536, 0, 131078, 65536, 0, 131077, 65536, 0, 65541, 65536, 0, 65542, 65536, 0, 65543, 65536, 0, 65540, 65536, 0, 65539, 65536, 0, 65538, 65536, 0, 65537, 65536, 0, 131073, 65536, 0, 196609, 65536, 0, 262145, 65536, 0, 131074, 65536, 0, 196610, 65536, 0, 196611, 65536, 0, 196612, 65536, 0, 131076, 65536, 0, 131075, 65536, 0, 196613, 65536, 0, 131079, 65536, 0)
+script = ExtResource("2_wpiv6")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(226, 92)
+script = ExtResource("2_xn2c1")
+metadata/_edit_group_ = true
+
+[node name="PlayerAnimation" type="AnimatedSprite2D" parent="Player"]
+texture_filter = 3
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_k78tv")
+animation = &"Walk"
+frame = 1
+frame_progress = 0.587346
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-1.5, 3)
+shape = SubResource("RectangleShape2D_myyvs")
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ItemList" type="ItemList" parent="UserInterface"]
+layout_mode = 0
+offset_left = 1019.0
+offset_top = 34.0
+offset_right = 1141.0
+offset_bottom = 587.0
+allow_reselect = true
+fixed_icon_size = Vector2i(16, 16)
+script = ExtResource("8_xgop5")
+
+[node name="GroundHoe" parent="." instance=ExtResource("7_l33ux")]
+position = Vector2(371, 189)
+scale = Vector2(0.108065, 0.103226)
+
+[node name="Ground Barrel" parent="." instance=ExtResource("8_g10y8")]
+position = Vector2(477, 135)
+
+[node name="ground_candle" parent="." instance=ExtResource("9_1xrnt")]
+position = Vector2(543, 220)
+scale = Vector2(1.3125, 1.53125)
+
+[connection signal="item_changed" from="UserInterface/ItemList" to="Player" method="_on_item_list_item_changed"]
+[connection signal="item_selected" from="UserInterface/ItemList" to="UserInterface/ItemList" method="_on_item_selected"]
+[connection signal="grabbed" from="GroundHoe" to="UserInterface/ItemList" method="_on_snaggable_grabbed"]
+[connection signal="grabbed" from="Ground Barrel" to="UserInterface/ItemList" method="_on_snaggable_grabbed"]
+[connection signal="grabbed" from="ground_candle" to="UserInterface/ItemList" method="_on_snaggable_grabbed"]

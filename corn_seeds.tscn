@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceykm7kq5xfg6"]
+
+[ext_resource type="PackedScene" uid="uid://70l2dixmkln5" path="res://snaggable_item.tscn" id="1_tg4d5"]
+[ext_resource type="Texture2D" uid="uid://chsp5nt8uo2tu" path="res://Assets/Seeds/CornSeeds.png" id="2_12qao"]
+
+[node name="CornSeeds" instance=ExtResource("1_tg4d5")]
+texture_filter = 3
+position = Vector2(5.00001, 2)
+scale = Vector2(5.875, 5.71875)
+texture = ExtResource("2_12qao")
+type = "CornSeeds"
+
+[node name="Area2D" parent="." index="0"]
+position = Vector2(-2.28571, 6.77395)
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(1.77507, -6.59908)

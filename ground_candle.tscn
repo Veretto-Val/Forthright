@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://170kgmlguyb5"]
+
+[ext_resource type="PackedScene" uid="uid://70l2dixmkln5" path="res://snaggable_item.tscn" id="1_fsb4m"]
+[ext_resource type="Texture2D" uid="uid://cl4ln48dm57vx" path="res://Assets/16 Bit RPG Asset Pack/Candle (Unlit).png" id="2_qjkb6"]
+
+[node name="ground_candle" instance=ExtResource("1_fsb4m")]
+position = Vector2(1, 0)
+scale = Vector2(0.9375, 1)
+texture = ExtResource("2_qjkb6")
+type = "Candle"
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(1.6, 0)
