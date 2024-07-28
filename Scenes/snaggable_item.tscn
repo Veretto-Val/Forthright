@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://70l2dixmkln5"]
 
-[ext_resource type="Script" path="res://snaggable_item.gd" id="1_n7dgn"]
+[ext_resource type="Script" path="res://Scripts/snaggable_item.gd" id="1_n7dgn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpgqt"]
 size = Vector2(9.6, 29)
