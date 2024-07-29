@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 var speed = 150
 var accel = 30
-
+ 
 var current_item
 
 var json_dictionary

@@ -55,7 +55,7 @@ func item_get(itemID):
 				print ("ITS FAILING")
 		add_item(json_dictionary.find_key(itemID), texture, true)
 
-
+ 
 func _input(event):
 	if currentItem > -1:
 		if Input.is_action_just_pressed("ScrollDown"):

@@ -1,7 +1,7 @@
 extends Sprite2D
 
 signal grabbed
-
+ 
 @export var type: String
 
 
