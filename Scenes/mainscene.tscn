@@ -109,7 +109,7 @@ position = Vector2(283, 189)
 scale = Vector2(0.108065, 0.103226)
 
 [node name="CornSeeds" parent="." instance=ExtResource("11_vjc0e")]
-position = Vector2(186.5, 221.562)
+position = Vector2(200, 236)
 scale = Vector2(3.9375, 4.57031)
 
 [node name="CornSeeds2" parent="." instance=ExtResource("11_vjc0e")]
