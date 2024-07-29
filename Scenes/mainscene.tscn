@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://kn6sc3i51v68"]
+[gd_scene load_steps=16 format=3 uid="uid://kn6sc3i51v68"]
 
 [ext_resource type="Texture2D" uid="uid://1fby7roakekt" path="res://Assets/ForthrightGround.png" id="1_67dsq"]
 [ext_resource type="Texture2D" uid="uid://b7ndch47g7nbq" path="res://Assets/PlayerWalk/walk1.png" id="2_d61ku"]
@@ -9,11 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://b6knf4jddjt6f" path="res://Assets/PlayerScatterSeeds/Scatter1.png" id="5_3ociw"]
 [ext_resource type="Texture2D" uid="uid://du6coe8btc8yv" path="res://Assets/PlayerScatterSeeds/Scatter2.png" id="6_kokui"]
 [ext_resource type="PackedScene" uid="uid://ckohkgw1l2u20" path="res://Scenes/ground_hoe.tscn" id="7_l33ux"]
-[ext_resource type="PackedScene" uid="uid://x2ctrtgecdn5" path="res://Scenes/ground_barrel.tscn" id="8_g10y8"]
 [ext_resource type="Script" path="res://Scripts/ItemList.gd" id="8_xgop5"]
-[ext_resource type="PackedScene" uid="uid://170kgmlguyb5" path="res://Scenes/ground_candle.tscn" id="9_1xrnt"]
 [ext_resource type="PackedScene" uid="uid://ceykm7kq5xfg6" path="res://Scenes/corn_seeds.tscn" id="11_vjc0e"]
-[ext_resource type="PackedScene" uid="uid://1pt3jtswu61i" path="res://Scenes/growth_tracker.tscn" id="14_65gp8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_go167"]
 texture = ExtResource("1_67dsq")
@@ -111,18 +108,9 @@ script = ExtResource("8_xgop5")
 position = Vector2(283, 189)
 scale = Vector2(0.108065, 0.103226)
 
-[node name="Ground Barrel" parent="." instance=ExtResource("8_g10y8")]
-position = Vector2(351, 131)
-
-[node name="ground_candle" parent="." instance=ExtResource("9_1xrnt")]
-position = Vector2(352, 48)
-scale = Vector2(1.3125, 1.53125)
-
 [node name="CornSeeds" parent="." instance=ExtResource("11_vjc0e")]
 position = Vector2(186.5, 221.562)
 scale = Vector2(3.9375, 4.57031)
-
-[node name="GrowthTracker" parent="." instance=ExtResource("14_65gp8")]
 
 [node name="CornSeeds2" parent="." instance=ExtResource("11_vjc0e")]
 position = Vector2(91, 230)
@@ -136,8 +124,6 @@ scale = Vector2(3.9375, 4.57031)
 [connection signal="item_clicked" from="UserInterface/ItemList" to="UserInterface/ItemList" method="_on_item_clicked"]
 [connection signal="item_selected" from="UserInterface/ItemList" to="UserInterface/ItemList" method="_on_item_selected"]
 [connection signal="grabbed" from="GroundHoe" to="UserInterface/ItemList" method="_on_snaggable_grabbed"]
-[connection signal="grabbed" from="Ground Barrel" to="UserInterface/ItemList" method="_on_snaggable_grabbed"]
-[connection signal="grabbed" from="ground_candle" to="UserInterface/ItemList" method="_on_snaggable_grabbed"]
 [connection signal="grabbed" from="CornSeeds" to="UserInterface/ItemList" method="_on_snaggable_grabbed"]
 [connection signal="grabbed" from="CornSeeds2" to="UserInterface/ItemList" method="_on_snaggable_grabbed"]
 [connection signal="grabbed" from="CornSeeds3" to="UserInterface/ItemList" method="_on_snaggable_grabbed"]
