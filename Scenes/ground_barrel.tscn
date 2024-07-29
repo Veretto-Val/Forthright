@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://x2ctrtgecdn5"]
 
-[ext_resource type="PackedScene" uid="uid://70l2dixmkln5" path="res://snaggable_item.tscn" id="1_qdd1l"]
+[ext_resource type="PackedScene" uid="uid://70l2dixmkln5" path="res://Scenes/snaggable_item.tscn" id="1_qdd1l"]
 [ext_resource type="Texture2D" uid="uid://byp8d3sl6njtw" path="res://Assets/16 Bit RPG Asset Pack/Barrel (Small).png" id="2_jhtdo"]
 
 [node name="Ground Barrel" instance=ExtResource("1_qdd1l")]
