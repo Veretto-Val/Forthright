@@ -103,6 +103,7 @@ func use_corn_seeds():
 		await get_tree().create_timer(3.0).timeout
 		
 		var growth = growth_tracker.instantiate(1)
+		print ("created")
 		growth.position = mouse_position
 		add_child(growth)
 		
@@ -115,5 +116,4 @@ func no_item_selected():
 
 
 func _on_item_list_item_changed(itemID):
-	print ("Changed")
 	current_item = itemID

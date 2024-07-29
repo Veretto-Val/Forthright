@@ -5,8 +5,8 @@
 
 [node name="CornSeeds" instance=ExtResource("1_tg4d5")]
 texture_filter = 3
-position = Vector2(5.00001, 2)
-scale = Vector2(5.875, 5.71875)
+position = Vector2(25, -3)
+scale = Vector2(13.5, 11.5469)
 texture = ExtResource("2_12qao")
 type = "Corn Seeds"
 
@@ -14,4 +14,5 @@ type = "Corn Seeds"
 position = Vector2(-2.28571, 6.77395)
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2(0.753794, -7.03624)
+position = Vector2(2.21164, -5.40994)
+scale = Vector2(1, 1)

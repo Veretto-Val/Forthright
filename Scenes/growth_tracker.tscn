@@ -1,9 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://1pt3jtswu61i"]
+[gd_scene load_steps=3 format=3 uid="uid://1pt3jtswu61i"]
+
+[ext_resource type="Script" path="res://Scripts/GrowthTracker.gd" id="1_lkedw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gy2ck"]
 
 [node name="GrowthTracker" type="Node2D"]
 position = Vector2(479.873, 156.275)
+script = ExtResource("1_lkedw")
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -12,5 +15,6 @@ position = Vector2(0.126862, 2.72475)
 shape = SubResource("RectangleShape2D_gy2ck")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
 autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
